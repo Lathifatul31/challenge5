@@ -1,0 +1,63 @@
+<div class="d-flex justify-content-between">
+  <h3>
+    <b>List Cars</b>
+  </h3>
+  <a href="/cars/add" class="d-flex">
+    <button type="button" class="btn btn-primary">+ Add New Car</button>
+  </a>
+</div>
+
+<div class="mt-3">
+  <a class="btn btn-outline-primary" role="button">All</a>
+  <a class="btn btn-outline-primary" href="/small" role="button">Small</a>
+  <a class="btn btn-outline-primary" href="/medium" role="button">Medium</a>
+  <a class="btn btn-outline-primary" href="/large" role="button">Large</a>
+</div>
+
+<div class="row m-0 p-0 mt-3">
+  <% newCars.forEach(car => { %>
+  <div class="col-md-4 p-2">
+    <div class="card">
+      <img src="<%= car.image %>" alt="" class="card-img-top" />
+      <div class="card-body">
+        <p><%= car.name %> / <%= car.size %></p>
+        <p class="fw-bold">Rp. <%= car.price %> / hari</p>
+        <p class="text-secondary">
+          <i class="fa fa-clock-o"></i>
+          Updated at <%= car.day %> <%= car.month %> <%= car.year %>, <%= car.hour %>.<%= car.minute %>
+        </p>
+        <div class="d-inline-flex gap-2">
+          <form action="/cars/delete/<%= car.id  %>?_method=DELETE" method="post">
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="/images/Beep.png" alt="mobil" />
+                    <h2>Menghapus Data Mobil</h2>
+                    <p>Setelah dihapus, data mobil tidak dapat dikembalikan. Yakin ingin menghapus?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Ya</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <!-- Button trigger modal -->
+          <!-- Modal -->
+
+          <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-trash"></i> Delete</button>
+          <a href="/cars/edit/<%= car.id %>"
+            ><button class="btn btn-success text-white"><i class="fa fa-edit"></i> Edit</button></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+</div>

@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap');
+
+* {
+    font-family: 'Poppins';
+}
+
+/* Side Bar */
+.side-navbar {
+    width: 180px;
+    height: 100%;
+    position: fixed;
+    margin-left: -300px;
+    background-color: #0D28A6;
+    transition: 0.5s;
+  }
+
+  .nav-link:active,
+  .nav-link:focus,
+  .nav-link:hover {
+    background-color: #626faa;
+  }
+
+  .my-container {
+    transition: 0.4s;
+  }
+  .active-nav {
+    margin-left: 0;
+  }
+
+
+/* konten */
+.active-cont {
+  margin-left: 11rem;
+}
+
+
+/* Nav Bar (Top) */
+#navigationBars {
+    height: 4.5rem;
+    position: relative;
+    right: 2rem;
+     
+}
+
+#menu-btn {
+  background-color: #0D28A6;
+  color: #fff;
+  margin-left: -40px;
+}
+
+.search-box {
+    height: 2.3rem;
+    margin-top: 0.7rem;
+}
+
+#search-button {
+    height: 2.3rem;
+    margin-top: 0.7rem;
+}
+
+.profile {
+    margin-top: 0.9rem;
+}
+
+.fltCarSize {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+.fltBtnCarSize {
+    float: left;
+  }
+  
+.fltBtnCarSize {
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
+    text-decoration: none;
+  }
+
+/* Display Cars */
+
+.card {
+    background: white;
+    border-radius: 8px;
+    width: 283px;
+    height: 383px;
+    padding: 24px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    margin-left: 2rem;
+    margin-left: 2 rem;
+  }
+  
+  .imageCars {
+    width: 13rem;
+    height: 8rem;
+  }
+  
+  .txt-Tipe {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 30px;
+      line-height: 180%;
+  }
+  
+  .txt-Harga {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      line-height: 180%;
+  }
+  
+  .txt-Ukuran {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: px;
+      line-height: 140%;
+  }
+  
+  #btn-editCars {
+    width: 40%;
+  }
+
+  #btn-removeCars {
+    width: 55%;
+  }

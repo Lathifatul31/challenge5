@@ -1,0 +1,40 @@
+
+<div class="">
+    <h4>Update Car Information</h4>
+</div>
+  
+  <form class="mt-4" method="post" action="/cars/updatecars/<%= car.id %>?_method=POST">
+    <div class="row mb-3">
+      <label class="col-sm-2 col-form-label">Nama</label>
+      <div class="col-sm-10">
+        <input type="text" name="nama" class="form-control" value="<%= car.name %>" required>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label class="col-sm-2 col-form-label">Harga</label>
+      <div class="col-sm-10">
+        <input type="text" name="harga" class="form-control" value="<%= car.price %>" required>
+      </div>
+    </div>
+    <div>
+      <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Ukuran</label>
+        <div class="col-sm-10">
+          <select class="form-select" name="ukuran" required>
+            <option value="Small" <%= (car.size == 'Small')?"selected":"" %>>Small</option>
+            <option value="Medium" <%= (car.size == 'Medium')?"selected":"" %>>Medium</option>
+            <option value="Large" <%= (car.size == 'Large')?"selected":"" %>>Large</option>
+          </select>
+        </div>
+    </div>
+    <div class="row mb-3">
+      <label class="col-sm-2 col-form-label">Gambar</label>
+      <div class="col-sm-10">
+        <input type="file" name="gambar" class="form-control" id="inputEmail3" value="<%= car.image %>">
+      </div>
+    <div class="row mt-5">
+      <div class="col-sm-10">
+        <button class="btn btn-outline-primary">Cancel</button>
+        <button class="btn btn-primary" type="submit">Save</button>
+      </div>
+  </form>

@@ -1,0 +1,135 @@
+body {
+  background-color: #f4f5f7;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.mini-sidebar {
+  width: auto;
+  max-height: max-content;
+  background-color: #0d28a6;
+}
+
+.mini-sidebar ul {
+  text-align: center;
+  font-size: 10px;
+  list-style: none;
+  padding: 0;
+  padding-top: 2vh;
+}
+
+.mini-sidebar li {
+  padding: 1vh;
+}
+
+.mini-sidebar i {
+  font-size: 20px;
+  color: white;
+}
+
+.mini-sidebar p {
+  margin-bottom: -0.1vh;
+  color: white;
+}
+
+.mini-sidebar li:hover {
+  background-color: #304cca;
+}
+
+.active-mini-sidebar {
+  background-color: #304cca;
+}
+
+.main-content {
+  background-color: #f4f5f7;
+  width: 100%;
+  height: min-content;
+}
+
+.top-navbar {
+  background-color: #ffffff;
+  width: auto;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 0px 10px;
+  border-bottom: rgb(184, 184, 184) solid 1px;
+}
+
+.left-side {
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-side {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper-content {
+  width: 100%;
+  display: flex;
+  min-height: 95%;
+  max-height: 100%;
+  background-color: #f4f5f7;
+}
+
+.big-sidebar {
+  min-width: 13%;
+  max-width: 13%;
+  min-height: 92vh;
+  background-color: white;
+  padding: 2vh;
+}
+
+.big-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: -2vh;
+  padding-top: 1vh;
+}
+
+.big-sidebar ul li {
+  margin: 1vh 0 1vh 0;
+  font-weight: 500;
+  padding: 1vh;
+  border-radius: 1vh;
+}
+
+.active-big-sidebar {
+  background-color: #cfd4ed;
+}
+
+.big-sidebar ul li:hover {
+  background-color: #cfd4ed;
+}
+
+.content {
+  /* font-size: 50px; */
+  min-height: 92vh;
+  background-color: #f4f5f7;
+  padding: 2vh;
+}
+
+.collapse-big-sidebar {
+  display: none;
+}
+
+/* @media (min-width: 720px) and (max-width: 1080px) {
+    .big-sidebar {
+        display: none;
+    }
+}  */
+
+/* @media (max-width: 768px) {
+  .big-sidebar {
+    display: none;
+  }
+} */
